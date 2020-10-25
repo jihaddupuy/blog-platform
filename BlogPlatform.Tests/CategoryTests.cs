@@ -12,7 +12,7 @@ namespace blog_template_practice.Tests
 
         public CategoryTests()
         {
-            sut = new Category(1,"Category name","Category Content");
+            sut = new Category(1,"Category name");
         }
 
         [Fact]
@@ -29,14 +29,6 @@ namespace blog_template_practice.Tests
             string result = sut.Name;
 
             Assert.Equal("Category name", result);
-        }
-        [Fact]
-        public void CategoryConstructor_Should_Set_Content()
-        {
-            string result = sut.Content;
-
-            Assert.Equal("Category Content", result);
-
-        }
+        } 
     }
 }

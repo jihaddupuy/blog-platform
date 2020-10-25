@@ -54,6 +54,5 @@ namespace blog_template_practice.Tests
 
             Assert.Equal("10/13/2020", result);
         }
-
     }
 }

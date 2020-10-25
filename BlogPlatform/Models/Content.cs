@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,8 +14,10 @@ namespace blog_template_practice.Models
         public string Author { get; set; }
         public string PublishDate { get; set; }
 
+        public virtual ICollection<Content> Contents { get; set; }
 
-        //public string category()
+
+
 
         public Content(int id, string title, string body, string author, string publishDate)
         {
@@ -25,5 +28,8 @@ namespace blog_template_practice.Models
             PublishDate = publishDate;
         }
 
+        public Content()
+        {
+        }
     }
 }
