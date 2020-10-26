@@ -42,11 +42,13 @@ namespace BlogPlatform.Migrations
                         new
                         {
                             Id = 1,
+                            ContentID = 1,
                             Name = "jake"
                         },
                         new
                         {
                             Id = 2,
+                            ContentID = 2,
                             Name = "jihad"
 
                         });
@@ -84,6 +86,7 @@ namespace BlogPlatform.Migrations
                         new
                         {
                             Id = 1,
+                            ContentId = 1,
                             Title = "cars",
                             Body = "work when they want",
                             Author = "crying mechanic",
@@ -93,9 +96,10 @@ namespace BlogPlatform.Migrations
                         new
                         {
                             Id = 2,
+                            ontentId = 2,
                             Title = "jeeps",
-                            Body = " always have leaks",
-                            Author = "crying mechanic",
+                            Body = " costing me to much money",
+                            Author = "crying owner",
                             PublishDate = "10/25/20"
                         });
                 });

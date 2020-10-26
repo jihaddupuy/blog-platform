@@ -13,19 +13,21 @@ namespace blog_template_practice.Models
         public string Body { get; set; }
         public string Author { get; set; }
         public string PublishDate { get; set; }
+        public int CategoryId { get; set; }
 
         public virtual ICollection<Content> Contents { get; set; }
 
 
 
 
-        public Content(int id, string title, string body, string author, string publishDate)
+        public Content(int id, string title, string body, string author, string publishDate, int categoryId)
         {
             Id = id;
             Title = title;
             Body = body;
             Author = author;
             PublishDate = publishDate;
+            CategoryId = categoryId;
         }
 
         public Content()

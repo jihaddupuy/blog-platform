@@ -28,5 +28,67 @@ namespace blog_template_practice.Controllers
 
             return View(model);
         }
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
+        }
+        [HttpGet]
+        public ViewResult CreateByCategoryId(int id)
+        {
+            ViewBag.CategoryId = id;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CreatebyCategoryId(Content content)
+        {
+            if (ModelState.IsValid)
+            {
+                contentRepo.Create(content);
+                return RedirectToAction("Details", "Category", new { id = content.CategoryId });
+            }
+            return View(content);
+        }
+        [HttpGet]
+        public ViewResult Update(int id)
+        {
+            Content model = contentRepo.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Update(Content content)
+        {
+            if (ModelState.IsValid)
+            {
+                contentRepo.Update(content);
+                return RedirectToAction("Details", "Category", new { id = content.CategoryId });
+            }
+            return View();
+        }
+
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+           Content model = contentRepo.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Content content)
+        {
+            contentRepo.Delete(content);
+
+            return RedirectToAction("Index");
+        }
+
+
+
+
+
+
+
+
     }
+
 }

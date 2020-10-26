@@ -12,7 +12,7 @@ namespace blog_template_practice.Tests
 
         public ContentTests()
         {
-            sut = new Content(1,"Content title", "This is the body of the blog content", "Blog author name", "10/13/2020");
+            sut = new Content(1,"Content title", "This is the body of the blog content", "Blog author name", "10/13/2020",1);
         }
 
         [Fact]
