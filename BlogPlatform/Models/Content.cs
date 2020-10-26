@@ -15,11 +15,9 @@ namespace blog_template_practice.Models
         public string PublishDate { get; set; }
         public int CategoryId { get; set; }
 
-        public virtual ICollection<Content> Contents { get; set; }
-
-
-
-
+        public virtual Category Category { get; set; }
+        
+        
         public Content(int id, string title, string body, string author, string publishDate, int categoryId)
         {
             Id = id;
