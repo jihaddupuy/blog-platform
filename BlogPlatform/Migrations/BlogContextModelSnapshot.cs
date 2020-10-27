@@ -31,6 +31,20 @@ namespace BlogPlatform.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id=1,
+                            Name= "jake",
+
+                        },
+                        new
+                        { 
+                            Id =2,
+                            Name="jake",
+                        
+                        });
                 });
 
             modelBuilder.Entity("blog_template_practice.Models.Content", b =>
@@ -60,6 +74,26 @@ namespace BlogPlatform.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Contents");
+
+                    b.HasData(
+                        new 
+                        {
+                          Id = 1,
+                          Title = "topic",
+                          Body = "stuff",
+                          Author = "people",
+                          PublishDate = "10/25/20",
+                          CategoryId = 1,
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Title = "topic",
+                            Body = "stuff",
+                            Author = "people",
+                            PublishDate = "10/25/20",
+                            CategoryId = 2,
+                        });
                 });
 
             modelBuilder.Entity("blog_template_practice.Models.Content", b =>
