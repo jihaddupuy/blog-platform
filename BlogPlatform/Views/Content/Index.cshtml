@@ -1,7 +1,22 @@
 ﻿@model IEnumerable<blog_template_practice.Models.Content>
 @{
-    Layout = null; 
+    Layout = null;
 }
 
-<h1>Index</h1>
+<!DOCTYPE html>
 
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Style/StyleSheet.css" />
+    <link href="~/Style/StyleSheet.css" rel="stylesheet" />
+    <title>Content</title>
+</head>
+<body>
+    @foreach (var content in Model)
+    {
+        <p> Name:<a href= "/Content/Details/@content.Id">@content.Title</a> </p>
+    }
+    <a href="/Category/Index">Return to Category list</a>
+</body>
+</html>
