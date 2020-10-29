@@ -33,6 +33,16 @@ namespace blog_template_practice.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult Create(Content content)
+        {
+            if (ModelState.IsValid)
+            {
+                ContentRepo.Create(content);
+                    return RedirectToAction("Details", "Category", new { id = content.CategoryId });
+            }
+                return View(content);
+        }
         [HttpGet]
         public ViewResult CreateByCategoryId(int id)
         {

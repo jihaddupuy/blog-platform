@@ -75,13 +75,13 @@ namespace blog_template_practice.Tests
             Assert.IsType<ViewResult>(result);
         }
 
-        //[Fact]
-        //public void Create_Post_Returns_ActionResult()
-        //{
-            //var result = sut.Create(new Content());
+        [Fact]
+        public void Create_Post_Returns_ActionResult()
+        {
+            var result = sut.Create(new Content());
 
-           // Assert.IsAssignableFrom<ActionResult>(result);
-       // }
+            Assert.IsAssignableFrom<ActionResult>(result);
+        }
 
         [Fact]
         public void Update_Returns_ViewResult()
