@@ -8,12 +8,20 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Style/DetailsSheet.css" />
+    <link href="~/Style/DetailsSheet.css" rel="stylesheet" />
     <title>Details</title>
 </head>
 <body>
-    @foreach(var content in Model.Contents)
+    
+
+    @foreach (var content in Model.Contents)
     {
-        <div>Content: @content.Category.Name</div>
+        <article>Name @content.Category.Name</article>
+        <article>>Title @content.Title</article>
+        <article>Body remove after css edit @content.Body</article>
+        <article>Author @content.Author</article>
+        <article> publish date @content.PublishDate</article>
     }
 
 
