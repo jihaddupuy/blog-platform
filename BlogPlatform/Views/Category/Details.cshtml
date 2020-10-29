@@ -13,7 +13,6 @@
     <title>Details</title>
 </head>
 <body>
-    
 
     @foreach (var content in Model.Contents)
     {
@@ -22,9 +21,12 @@
         <article>Body remove after css edit @content.Body</article>
         <article>Author @content.Author</article>
         <article> publish date @content.PublishDate</article>
+
+        <a href="/Content/Create">create content</a>
+        <a href="/Content/Update/@content.Id">update content</a>
+        <a href="/Content/Delete/@content.Id">delete content</a>
+        <a href="/Category/Index"> Return to Categories</a>
     }
-
-
 
 </body>
 </html>
