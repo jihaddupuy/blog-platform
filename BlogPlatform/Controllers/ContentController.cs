@@ -10,21 +10,21 @@ namespace blog_template_practice.Controllers
 {
     public class ContentController : Controller
     {
-        IRepository<Content> contentRepo;
+        IRepository<Content> ContentRepo;
 
         public ContentController(IRepository<Content> contentRepo)
         {
-            this.contentRepo = contentRepo;
+            this.ContentRepo = contentRepo;
         }
         public ViewResult Index()
         {
-            var model = contentRepo.GetAll();
+            var model = ContentRepo.GetAll();
 
             return View(model);
         }
         public ViewResult Details(int id)
         {
-            var model = contentRepo.GetById(id);
+            var model = ContentRepo.GetById(id);
 
             return View(model);
         }
@@ -44,7 +44,7 @@ namespace blog_template_practice.Controllers
         {
             if (ModelState.IsValid)
             {
-                contentRepo.Create(content);
+                ContentRepo.Create(content);
                 return RedirectToAction("Details", "Category", new { id = content.CategoryId });
             }
             return View(content);
@@ -52,7 +52,7 @@ namespace blog_template_practice.Controllers
         [HttpGet]
         public ViewResult Update(int id)
         {
-            Content model = contentRepo.GetById(id);
+            Content model = ContentRepo.GetById(id);
             return View(model);
         }
 
@@ -61,7 +61,7 @@ namespace blog_template_practice.Controllers
         {
             if (ModelState.IsValid)
             {
-                contentRepo.Update(content);
+                ContentRepo.Update(content);
                 return RedirectToAction("Details", "Category", new { id = content.CategoryId });
             }
             return View();
@@ -70,14 +70,14 @@ namespace blog_template_practice.Controllers
         [HttpGet]
         public ViewResult Delete(int id)
         {
-           Content model = contentRepo.GetById(id);
+           Content model = ContentRepo.GetById(id);
             return View(model);
         }
 
         [HttpPost]
         public ActionResult Delete(Content content)
         {
-            contentRepo.Delete(content);
+            ContentRepo.Delete(content);
 
             return RedirectToAction("Index");
         }

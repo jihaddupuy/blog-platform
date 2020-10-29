@@ -1,10 +1,24 @@
 ﻿@model IEnumerable<blog_template_practice.Models.Category>
 @{
-        Layout = null;
-    }
+    Layout = null;
+}
 
-!
+<!DOCTYPE html>
+<nav> <a href="First Containter"></a></nav>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Style/StyleSheet.css" />
+    <link href="~/Style/StyleSheet.css" rel="stylesheet" />
+    <title>Index</title>
+</head>
 
-
-
-
+<body>
+    <Main class="First Container">
+        @foreach (var category in Model)
+        {
+            <article>Name: <a href="/Category/Details/@category.Id">@category.Name</a></article>
+        }
+    </Main>
+</body>
+</html>

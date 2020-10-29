@@ -1,4 +1,4 @@
-﻿
+﻿@model blog_template_practice.Models.Content
 @{
     Layout = null;
 }
@@ -11,5 +11,11 @@
     <title>Details</title>
 </head>
 <body>
+    <p>Title <span>@Model.Title</span></p>
+    <p>Body <span>@Model.Body</span> </p>
+    <p>Author <span>@Model.Author</span> </p>
+    <p>PublishDate <span>@Model.PublishDate</span> </p>
+
+    
 </body>
 </html>

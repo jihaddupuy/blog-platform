@@ -1,5 +1,22 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model blog_template_practice.Models.Category
 @{
+    Layout = null;
 }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    @foreach(var content in Model.Contents)
+    {
+        <div>Content: @content.Category.Name</div>
+    }
+
+
+
+</body>
+</html>
