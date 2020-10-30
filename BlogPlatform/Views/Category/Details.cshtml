@@ -16,11 +16,11 @@
 
     @foreach (var content in Model.Contents)
     {
-        <article>Name @content.Category.Name</article>
-        <article>>Title @content.Title</article>
-        <article>Body remove after css edit @content.Body</article>
-        <article>Author @content.Author</article>
-        <article> publish date @content.PublishDate</article>
+        <article>Name: @content.Category.Name</article>
+        <article>Title: @content.Title</article>
+        <article>Body: @content.Body</article>
+        <article>Author: @content.Author</article>
+        <article> publish date: @content.PublishDate</article>
 
         <a href="/Content/Create">create content</a>
         <a href="/Content/Update/@content.Id">update content</a>

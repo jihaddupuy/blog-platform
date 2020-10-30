@@ -1,2 +1,14 @@
 ﻿body {
+    background-image: url(/Images/photo-1519664692691-4f00f4faeb7c.jpg);
+    text-align: center;
+    font-size: 28px;
 }
+a {
+    text-align: center;
+    color: #6F411C;
+}
+
+    a:hover, a:active {
+        background-color: orange;
+    }
+

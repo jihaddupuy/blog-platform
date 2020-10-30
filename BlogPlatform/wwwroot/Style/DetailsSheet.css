@@ -1,8 +1,19 @@
 ﻿body {
+    padding-top: 7em;
     background-image: url(/Images/brydon-mccluskey-vMneecAwo34-unsplash.jpg);
-
+    text-align: center;
+    color: yellow;
 }
 article{
     text-align: center;
     font-size: 26px;
 }
+a {
+    text-align: center;
+    color: tan;
+}
+
+    a:hover, a:active {
+        background-color: White;
+    }
+
